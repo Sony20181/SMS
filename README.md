@@ -3,7 +3,7 @@
 </h1>
 <h3><a href="https://github.com/Sony20181" target="_blank">Соня</a> - главный разработчик и аналитик<img src="https://github.com/Sony20181/SMS/blob/main/images/Ve1.gif" height="50"></h3>
 <h3><a href="https://github.com/MariaArk" target="_blank">Маша</a> - менеджер и просто красавица <img src="https://github.com/Sony20181/SMS/blob/main/images/VeC.gif" height="50"></h3>
-<h3><a href="https://github.com/Sony20181" target="_blank">Соня</a> - аналитик и тестировщик <img src="https://github.com/Sony20181/SMS/blob/main/images/14Se.gif" height="50"></h3>
+<h3><a href="https://github.com/SofaResh" target="_blank">Соня</a> - аналитик и тестировщик <img src="https://github.com/Sony20181/SMS/blob/main/images/14Se.gif" height="50"></h3>
 
 <img src="https://github.com/Sony20181/SMS/blob/main/2ull.gif" height="200">
 
