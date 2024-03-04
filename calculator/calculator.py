@@ -63,6 +63,3 @@ def evaluate_expression(expression):
     except:
         return "Ошибка при вычислении выражения"
 
-expression = input("Введите выражение: ")
-result = evaluate_expression(expression)
-print("Результат:", result)
