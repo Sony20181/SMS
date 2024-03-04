@@ -3,14 +3,9 @@
 </h1>
 <h3><a href="https://github.com/Sony20181" target="_blank">Соня</a> - главный разработчик<img src="https://i.gifer.com/Ve1.gif" height="50"></h3>
 <h3><a href="https://github.com/MariaArk" target="_blank">Маша</a> - менеджер <img src="https://i.gifer.com/VeC.gif" height="50"></h3>
-<h3><a href="https://github.com/Sony20181" target="_blank">Соня</a> - аналитик и тестировщик <img src="https://i.gifer.com/14Se.gif" height="50"></h3>
+<h3><a href="https://github.com/Sony20181" target="_blank">Соня</a> - аналитик и тестировщик <img src="https://i.gifer.com/14Se.gif" height="35"></h3>
 
-<img src="https://i.gifer.com/2ull.gif" height="100"> 
-<img src="https://i.gifer.com/2ull.gif" height="100">
-<img src="https://i.gifer.com/2ull.gif" height="100">
-<img src="https://i.gifer.com/2ull.gif" height="100">
-<img src="https://i.gifer.com/2ull.gif" height="100">
-<img src="https://i.gifer.com/2ull.gif" height="100">
+<img src="https://github.com/Sony20181/SMS/blob/main/2ull.gif" height="100"> 
 
 
 
