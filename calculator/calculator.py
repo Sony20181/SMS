@@ -25,7 +25,7 @@ def apply_operator(operators, values):
         values.append(left * right)
     elif operator == '/':
         if right == 0:
-            raise ZeroDivisionError(" Ошибка. Происходит деление на 0")
+            raise ZeroDivisionError("Ошибка. Происходит деление на 0")
         values.append(left // right)
     elif operator == '^':
         values.append(left ** right)
@@ -37,7 +37,7 @@ def evaluate_expression(expression):
         operators = []
         i = 0
         while i < len(tokens):
-            print("values:",values,"operators",operators, "i:",i, "tokens:", tokens )
+            #print("values:",values,"operators",operators, "i:",i, "tokens:", tokens )
             if tokens[i] == '(':
                 operators.append(tokens[i])
             elif tokens[i].isdigit(): # считываем число целиком
@@ -63,6 +63,3 @@ def evaluate_expression(expression):
     except:
         return "Ошибка при вычислении выражения"
 
-expression = input("Введите выражение: ")
-result = evaluate_expression(expression)
-print("Результат:", result)
