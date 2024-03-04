@@ -1,10 +1,9 @@
-'''
-код сначала определяет функцию precedence, которая возвращает приоритет оператора. 
-функция apply_operator, которая выполняет операцию над двумя значениями и одним оператором. 
-определяется функция evaluate_expression, которая принимает строку выражения и возвращает результат его вычисления.
-пользователь вводит выражение, оно передается функции evaluate_expression, которая вычисляет результат и выводит его на экран.
-'''
-def precedence(op):
+def precedence(op: str) -> int:
+    """
+    Возвращает приоритет оператора
+    :param op: арифметический оператор
+    :return: приоритет оператора
+    """
     if op == '+' or op == '-':
         return 1
     if op == '*' or op == '/':
@@ -13,7 +12,13 @@ def precedence(op):
         return 3
     return 0
 
-def apply_operator(operators, values):
+
+def apply_operator(operators: list, values: list) -> None:
+    """
+    Выполняет арифметическую операцию
+    :param operators: список операторов
+    :param values: список значений
+    """
     operator = operators.pop()
     right = values.pop()
     left = values.pop()
@@ -30,28 +35,34 @@ def apply_operator(operators, values):
     elif operator == '^':
         values.append(left ** right)
 
-def evaluate_expression(expression):
+
+def evaluate_expression(expression: str):
+    """
+    Вычисляет выражение
+    :param expression: выражение
+    :return: результат выражения
+    """
     try:
         tokens = expression.replace(" ", "")
         values = []
         operators = []
         i = 0
         while i < len(tokens):
-            #print("values:",values,"operators",operators, "i:",i, "tokens:", tokens )
+            # print("values:",values,"operators",operators, "i:",i, "tokens:", tokens )
             if tokens[i] == '(':
                 operators.append(tokens[i])
-            elif tokens[i].isdigit(): # считываем число целиком
+            elif tokens[i].isdigit():  # считываем число целиком
                 j = i
-                while j < len(tokens) and (tokens[j].isdigit()): 
+                while j < len(tokens) and (tokens[j].isdigit()):
                     j += 1
                 values.append(int(tokens[i:j]))
                 i = j - 1
             elif tokens[i] == ')':
-                while operators[-1] != '(': # пока не найдем ( выполняем операции
+                while operators[-1] != '(':  # пока не найдем ( выполняем операции
                     apply_operator(operators, values)
                 operators.pop()
             else:
-                while operators and precedence(operators[-1]) >= precedence(tokens[i]): # для приоритета 
+                while operators and precedence(operators[-1]) >= precedence(tokens[i]):  # для приоритета
                     apply_operator(operators, values)
                 operators.append(tokens[i])
             i += 1
@@ -62,4 +73,3 @@ def evaluate_expression(expression):
         return str(e)
     except:
         return "Ошибка при вычислении выражения"
-
