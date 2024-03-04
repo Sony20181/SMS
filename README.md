@@ -5,7 +5,7 @@
 <h5><a href="https://github.com/MariaArk" target="_blank">Маша</a> - менеджер </h5>
 <h5><a href="https://github.com/Sony20181" target="_blank">Соня</a> - аналитик и тестировщик</h5>
 
-<img src="<iframe src="https://gifer.com/embed/Z2kv" width=480 height=576.000 frameBorder="0" allowFullScreen></iframe><p><a href="https://gifer.com">через GIFER</a></p>" height="32"/>
+<img src="<iframe src="<iframe src="https://gifer.com/embed/Z2kv" width=480 height=576.000 frameBorder="0" allowFullScreen></iframe><p><a href="https://gifer.com">через GIFER</a></p>"/>
 
 <h3 align="center">Калькулятор</h3>
 <h4 align="left">Проблема проекта:</h4>
