@@ -1,11 +1,18 @@
-<h1 align="center">Привет!<img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32"/>
+<h1 align="center">Привет!<img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="35"/>
   Это команда SMS. <a href="https://github.com/Sony20181" target="_blank">Соня</a>, <a href="https://github.com/MariaArk" target="_blank">Маша</a> и <a href="https://github.com/SofaResh" target="_blank">Соня</a>
 </h1>
-<h5><a href="https://github.com/Sony20181" target="_blank">Соня</a> - главный разработчик</h5>
-<h5><a href="https://github.com/MariaArk" target="_blank">Маша</a> - менеджер </h5>
-<h5><a href="https://github.com/Sony20181" target="_blank">Соня</a> - аналитик и тестировщик</h5>
+<h3><a href="https://github.com/Sony20181" target="_blank">Соня</a> - главный разработчик<img src="https://i.gifer.com/Ve1.gif" height="50"></h3>
+<h3><a href="https://github.com/MariaArk" target="_blank">Маша</a> - менеджер <img src="https://i.gifer.com/VeC.gif" height="50"></h3>
+<h3><a href="https://github.com/Sony20181" target="_blank">Соня</a> - аналитик и тестировщик <img src="https://i.gifer.com/14Se.gif" height="50"></h3>
 
-<img src="<iframe src="<iframe src="https://gifer.com/embed/Z2kv" width=480 height=576.000 frameBorder="0" allowFullScreen></iframe><p><a href="https://gifer.com">через GIFER</a></p>"/>
+<img src="https://i.gifer.com/2ull.gif" height="100"> 
+<img src="https://i.gifer.com/2ull.gif" height="100">
+<img src="https://i.gifer.com/2ull.gif" height="100">
+<img src="https://i.gifer.com/2ull.gif" height="100">
+<img src="https://i.gifer.com/2ull.gif" height="100">
+<img src="https://i.gifer.com/2ull.gif" height="100">
+
+
 
 <h3 align="center">Калькулятор</h3>
 <h4 align="left">Проблема проекта:</h4>
