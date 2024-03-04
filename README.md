@@ -1,4 +1,4 @@
-<h1 align="center">Привет!<img src="https://i.gifer.com/nUq.gif" height="32"/>
+<h1 align="center">Привет!<img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="32"/>
   Это команда SMS. <a href="https://github.com/Sony20181" target="_blank">Соня</a>, <a href="https://github.com/MariaArk" target="_blank">Маша</a> и <a href="https://github.com/SofaResh" target="_blank">Соня</a>
 </h1>
 <h3 align="center">Калькулятор</h3>
