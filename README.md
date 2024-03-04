@@ -1,9 +1,9 @@
 <h1 align="center">Привет!<img src="https://github.com/blackcater/blackcater/raw/main/images/Hi.gif" height="35"/>
   Это команда SMS. <a href="https://github.com/Sony20181" target="_blank">Соня</a>, <a href="https://github.com/MariaArk" target="_blank">Маша</a> и <a href="https://github.com/SofaResh" target="_blank">Соня</a>
 </h1>
-<h3><a href="https://github.com/Sony20181" target="_blank">Соня</a> - главный разработчик и аналитик<img src="https://github.com/Sony20181/SMS/blob/main/images/Ve1.gif" height="50"></h3>
-<h3><a href="https://github.com/MariaArk" target="_blank">Маша</a> - менеджер и просто красавица <img src="https://github.com/Sony20181/SMS/blob/main/images/VeC.gif" height="50"></h3>
-<h3><a href="https://github.com/SofaResh" target="_blank">Соня</a> - аналитик и тестировщик <img src="https://github.com/Sony20181/SMS/blob/main/images/14Se.gif" height="50"></h3>
+<h3><a href="https://github.com/Sony20181" target="_blank">Соня</a> - главный разработчик и аналитик<img src="images/Ve1.gif" height="50"></h3>
+<h3><a href="https://github.com/MariaArk" target="_blank">Маша</a> - менеджер и просто красавица <img src="images/VeC.gif" height="50"></h3>
+<h3><a href="https://github.com/SofaResh" target="_blank">Соня</a> - аналитик и тестировщик <img src="images/14Se.gif" height="50"></h3>
 
 <img src="images/2ull.gif" height="200">
 
@@ -16,6 +16,7 @@
 <h4 align="left">Цель проекта:</h4>
 <h5 align="left">Выполнять арифметические операции с числами</h5>
 <h4 align="left">Формулировка задачи:</h4>
-<h5 align="left">Реализовать «калькулятор целых чисел», выполняющий операции: сложение, вычитание, умножение, целочисленное деление с округлением вниз, возведение в степень, операции со скобками.
+<h5 align="left">Реализовать «калькулятор целых чисел», выполняющий операции: сложение, вычитание, умножение,
+целочисленное деление с округлением вниз, возведение в степень, операции со скобками.
 Язык программирования: Python.</h5>
-<img src="https://github.com/Sony20181/SMS/blob/main/images/28ee.gif" height="200">
+<img src="images/28ee.gif" height="200">
