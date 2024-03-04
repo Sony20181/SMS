@@ -25,7 +25,7 @@ def apply_operator(operators, values):
         values.append(left * right)
     elif operator == '/':
         if right == 0:
-            raise ZeroDivisionError(" Ошибка. Происходит деление на 0")
+            raise ZeroDivisionError("Ошибка. Происходит деление на 0")
         values.append(left // right)
     elif operator == '^':
         values.append(left ** right)
