@@ -18,4 +18,4 @@
 <h4 align="left">Формулировка задачи:</h4>
 <h5 align="left">Реализовать «калькулятор целых чисел», выполняющий операции: сложение, вычитание, умножение, целочисленное деление с округлением вниз, возведение в степень, операции со скобками.
 Язык программирования: Python.</h5>
-<img src="https://github.com/Sony20181/SMS/blob/main/images/28ee.gif" height="1000">
+<img src="https://github.com/Sony20181/SMS/blob/main/images/28ee.gif" height="200">
