@@ -19,16 +19,21 @@ def apply_operator(operators, values):
     left = values.pop()
     if operator == '+':
         values.append(left + right)
+        return values
     elif operator == '-':
         values.append(left - right)
+        return values
     elif operator == '*':
         values.append(left * right)
+        return values
     elif operator == '/':
         if right == 0:
             raise ZeroDivisionError("Ошибка. Происходит деление на 0")
         values.append(left // right)
+        return values
     elif operator == '^':
         values.append(left ** right)
+        return values
 
 def evaluate_expression(expression):
     try:
@@ -62,4 +67,5 @@ def evaluate_expression(expression):
         return str(e)
     except:
         return "Ошибка при вычислении выражения"
+
 
