@@ -1,3 +1,8 @@
+import re
+
+# from Vector import Vector
+
+
 def precedence(op: str) -> int:
     """
     Возвращает приоритет оператора
@@ -43,33 +48,39 @@ def evaluate_expression(expression: str):
     :return: результат выражения
     """
     try:
-        tokens = expression.replace(" ", "")
+        expression = re.sub(r'\s+', ' ', expression)
+        tokens = expression.split(" ")
         values = []
         operators = []
-        i = 0
-        while i < len(tokens):
-            # print("values:",values,"operators",operators, "i:",i, "tokens:", tokens )
-            if tokens[i] == '(':
-                operators.append(tokens[i])
-            elif tokens[i].isdigit():  # считываем число целиком
-                j = i
-                while j < len(tokens) and (tokens[j].isdigit()):
-                    j += 1
-                values.append(int(tokens[i:j]))
-                i = j - 1
-            elif tokens[i] == ')':
+
+        for token in tokens:
+            if token == '(':
+                operators.append(token)
+
+            elif token.isdigit() or (token.startswith('-') and token[1:].isdigit()):  # считываем число целиком
+                values.append(int(token))
+
+            elif token[0] == '{':
+                values.append(parse_vector(token))
+
+            elif token == ')':
                 while operators[-1] != '(':  # пока не найдем ( выполняем операции
                     apply_operator(operators, values)
                 operators.pop()
+
             else:
-                while operators and precedence(operators[-1]) >= precedence(tokens[i]):  # для приоритета
+                while operators and precedence(operators[-1]) >= precedence(token):  # для приоритета
                     apply_operator(operators, values)
-                operators.append(tokens[i])
-            i += 1
+                operators.append(token)
+
         while operators:
             apply_operator(operators, values)
+
         return values[-1]
+
     except ZeroDivisionError as e:
+        return str(e)
+    except ValueError as e:
         return str(e)
     except:
         return "Ошибка при вычислении выражения"
