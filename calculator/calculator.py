@@ -1,6 +1,6 @@
 import re
 
-# from Vector import Vector
+from Vector import Vector
 
 
 def precedence(op: str) -> int:
@@ -84,3 +84,8 @@ def evaluate_expression(expression: str):
         return str(e)
     except:
         return "Ошибка при вычислении выражения"
+
+
+def parse_vector(vector: str) -> Vector:
+    components = vector[1:-1].split(';')
+    return Vector(*list(map(int, components)))
