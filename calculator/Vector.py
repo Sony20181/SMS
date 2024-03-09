@@ -43,6 +43,8 @@ class Vector(object):
 
     def __sub__(self, other):
         if isinstance(other, Vector):
+            if len(self) != len(other):
+                raise ValueError("У векторов разные размерности")
             subbed = tuple(a - b for a, b in zip(self, other))
         elif isinstance(other, (int, float)):
             subbed = tuple(a - other for a in self)
