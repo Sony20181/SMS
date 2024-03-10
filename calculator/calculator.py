@@ -1,6 +1,7 @@
 import re
 
 from Vector import Vector
+from VectorException import VectorException
 
 
 def precedence(op: str) -> int:
@@ -38,7 +39,7 @@ def apply_operator(operators: list, values: list) -> None:
             raise ZeroDivisionError("Ошибка. Происходит деление на 0")
         values.append(int(left / right))
     elif operator == '^':
-       values.append(int(left ** right))
+        values.append(int(left ** right))
 
 
 def evaluate_expression(expression: str):
@@ -78,14 +79,21 @@ def evaluate_expression(expression: str):
 
         return values[-1]
 
-    except ZeroDivisionError as e:
-        return str(e)
-    except ValueError as e:
+    except (ZeroDivisionError, VectorException) as e:
         return str(e)
     except:
         return "Ошибка при вычислении выражения"
 
 
 def parse_vector(vector: str) -> Vector:
+    if vector == '{}':
+        raise VectorException("Вектор не может быть пустым")
+
     components = vector[1:-1].split(';')
-    return Vector(*list(map(int, components)))
+    arguments = []
+    for component in components:
+        try:
+            arguments.append(int(component))
+        except ValueError:
+            raise VectorException(f"Неверный формат ввода '{component}'")
+    return Vector(*arguments)

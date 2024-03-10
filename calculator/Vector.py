@@ -1,3 +1,6 @@
+from VectorException import VectorException
+
+
 class Vector(object):
     def __init__(self, *args):
         self.values = args
@@ -5,7 +8,7 @@ class Vector(object):
     def __mul__(self, other):
         if isinstance(other, Vector):
             if len(self) != len(other):
-                raise ValueError("У векторов разные размерности")
+                raise VectorException("У векторов разные размерности")
             return sum(a * b for a, b in zip(self, other))
         elif isinstance(other, int):
             product = tuple(a * other for a in self)
@@ -17,10 +20,14 @@ class Vector(object):
     def __truediv__(self, other):
         if isinstance(other, Vector):
             if len(self) != len(other):
-                raise ValueError("У векторов разные размерности")
-            divided = tuple(self[i] / other[i] for i in range(len(self)))
+                raise VectorException("У векторов разные размерности")
+            if 0 in other.values:
+                raise ZeroDivisionError(f"Ошибка. Деление на 0. Вектор {other}")
+            divided = tuple(int(self[i] / other[i]) for i in range(len(self)))
         elif isinstance(other, int):
-            divided = tuple(a / other for a in self)
+            if other == 0:
+                raise ZeroDivisionError(f"Ошибка. Нельзя разделить вектор на 0.")
+            divided = tuple(int(a / other) for a in self)
 
         return self.__class__(*divided)
 
@@ -28,10 +35,9 @@ class Vector(object):
         return self.__truediv__(other)
 
     def __add__(self, other):
-        """ Returns the vector addition of self and other """
         if isinstance(other, Vector):
             if len(self) != len(other):
-                raise ValueError("У векторов разные размерности")
+                raise VectorException("У векторов разные размерности")
             added = tuple(a + b for a, b in zip(self, other))
         elif isinstance(other, (int, float)):
             added = tuple(a + other for a in self)
@@ -44,7 +50,7 @@ class Vector(object):
     def __sub__(self, other):
         if isinstance(other, Vector):
             if len(self) != len(other):
-                raise ValueError("У векторов разные размерности")
+                raise VectorException("У векторов разные размерности")
             subbed = tuple(a - b for a, b in zip(self, other))
         elif isinstance(other, (int, float)):
             subbed = tuple(a - other for a in self)
@@ -55,7 +61,7 @@ class Vector(object):
         return self.__sub__(other)
 
     def __pow__(self, other):
-        raise ValueError("Невозможно возвести вектор в степень")
+        raise VectorException("Невозможно возвести вектор в степень")
 
     def __rpow__(self, other):
         return self.__pow__(other)
@@ -69,5 +75,15 @@ class Vector(object):
     def __getitem__(self, key):
         return self.values[key]
 
-    def __repr__(self):
+    def __eq__(self, other):
+        if isinstance(other, Vector):
+            return self.values == other.values
+        if isinstance(other, str):
+            return self.__str__() == other
+        return False
+
+    def __str__(self):
         return "{" + ";".join(list(map(str, self.values))) + "}"
+
+    def __repr__(self):
+        return self.__str__()
