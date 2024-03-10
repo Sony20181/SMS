@@ -36,9 +36,9 @@ def apply_operator(operators: list, values: list) -> None:
     elif operator == '/':
         if right == 0:
             raise ZeroDivisionError("Ошибка. Происходит деление на 0")
-        values.append(left // right)
+        values.append(int(left / right))
     elif operator == '^':
-        values.append(left ** right)
+       values.append(int(left ** right))
 
 
 def evaluate_expression(expression: str):
