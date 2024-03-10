@@ -39,7 +39,7 @@ class Vector(object):
             if len(self) != len(other):
                 raise VectorException("У векторов разные размерности")
             added = tuple(a + b for a, b in zip(self, other))
-        elif isinstance(other, (int, float)):
+        elif isinstance(other, int):
             added = tuple(a + other for a in self)
 
         return self.__class__(*added)
@@ -52,7 +52,7 @@ class Vector(object):
             if len(self) != len(other):
                 raise VectorException("У векторов разные размерности")
             subbed = tuple(a - b for a, b in zip(self, other))
-        elif isinstance(other, (int, float)):
+        elif isinstance(other, int):
             subbed = tuple(a - other for a in self)
 
         return self.__class__(*subbed)
@@ -61,7 +61,14 @@ class Vector(object):
         return self.__sub__(other)
 
     def __pow__(self, other):
-        raise VectorException("Невозможно возвести вектор в степень")
+        if isinstance(other, Vector):
+            if len(self) != len(other):
+                raise VectorException("У векторов разные размерности")
+            powed = tuple(int(a ** b) for a, b in zip(self, other))
+        elif isinstance(other, int):
+            powed = tuple(int(a ** other) for a in self)
+
+        return self.__class__(*powed)
 
     def __rpow__(self, other):
         return self.__pow__(other)
