@@ -35,11 +35,17 @@ def apply_operator(operators: list, values: list) -> None:
     elif operator == '*':
         values.append(left * right)
     elif operator == '/':
-        if right == 0:
-            raise ZeroDivisionError("Ошибка. Происходит деление на 0")
-        values.append(int(left / right))
+        if isinstance(left, Vector) or isinstance(right, Vector):
+            values.append(left / right)
+        else:
+            if right == 0:
+                raise ZeroDivisionError("Ошибка. Происходит деление на 0")
+            values.append(int(left / right))
     elif operator == '^':
-        values.append(int(left ** right))
+        if isinstance(left, Vector) or isinstance(right, Vector):
+            values.append(left ** right)
+        else:
+            values.append(int(left ** right))
 
 
 def evaluate_expression(expression: str):

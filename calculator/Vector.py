@@ -24,14 +24,17 @@ class Vector(object):
             if 0 in other.values:
                 raise ZeroDivisionError(f"Ошибка. Деление на 0. Вектор {other}")
             divided = tuple(int(self[i] / other[i]) for i in range(len(self)))
+
         elif isinstance(other, int):
             if other == 0:
-                raise ZeroDivisionError(f"Ошибка. Нельзя разделить вектор на 0.")
+                raise ZeroDivisionError("Ошибка. Нельзя разделить вектор на 0.")
             divided = tuple(int(a / other) for a in self)
 
         return self.__class__(*divided)
 
     def __rtruediv__(self, other):
+        if isinstance(other, int):
+            raise VectorException("Ошибка. Невозможно разделить число на вектор")
         return self.__truediv__(other)
 
     def __add__(self, other):
@@ -71,6 +74,8 @@ class Vector(object):
         return self.__class__(*powed)
 
     def __rpow__(self, other):
+        if isinstance(other, int):
+            raise VectorException("Ошибка. Невозможно возвести число в степень вектор")
         return self.__pow__(other)
 
     def __iter__(self):
